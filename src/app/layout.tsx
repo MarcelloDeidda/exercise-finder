@@ -1,0 +1,33 @@
+import type { Metadata } from 'next'
+import { Poppins } from "next/font/google";
+
+import './globals.css'
+import Navbar from '@/components/UI/Navbar'
+
+export const metadata: Metadata = {
+  title: 'Exercise Finder',
+  description: 'Discover a wide range of exercises to train a specific muscle group.',
+}
+
+const poppins = Poppins({
+  weight: '400',
+  subsets: ['latin']
+})
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={poppins.className}>
+        <div id="overlays" />
+        <Navbar />
+        <main>
+          {children}
+        </main>
+      </body>
+    </html>
+  )
+}
