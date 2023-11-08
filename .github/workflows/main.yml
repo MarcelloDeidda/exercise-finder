@@ -25,10 +25,17 @@ jobs:
             - name: Start development server
               run: npm dev
             
+            - name: Wait for the application to be ready
+              run: |
+                timeout=0
+                until curl --silent --fail http://localhost:3000 || ((timeout++ > 60)); do
+                  sleep 5
+                done
+                if [ "$timeout" -gt 60 ]; then
+                  echo "Application did not start within the expected time."
+                  exit 1
+                fi
+    
             - name: Run Cypress tests
-              uses: cypress-io/github-action@v3
-              with:
-                browser: chrome
-                run: npm test
-                wait-on: "http://localhost:3000"
+              run: npx cypress run
                 
