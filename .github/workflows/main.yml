@@ -23,12 +23,12 @@ jobs:
               run: npm install
             
             - name: Start development server
-              run: npm run dev
+              run: npm dev
             
             - name: Run Cypress tests
               uses: cypress-io/github-action@v3
               with:
                 browser: chrome
-                run: npm run test
+                run: npm test
                 wait-on: "http://localhost:3000"
                 
