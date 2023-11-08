@@ -26,4 +26,9 @@ jobs:
               run: npm run dev
             
             - name: Run Cypress tests
-              run: npm test
+              uses: cypress-io/github-action@v3
+              with:
+                browser: chrome
+                run: npm run test
+                wait-on: "http://localhost:3000"
+                
