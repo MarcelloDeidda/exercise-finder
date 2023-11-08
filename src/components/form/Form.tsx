@@ -8,6 +8,7 @@ import classes from "./Form.module.css";
 
 import { muscleInterface } from "@/lib/interfaces";
 
+// Controlled form component with state passed down to Select component
 const Form = ({ muscleList }: { muscleList: muscleInterface[] }) => {
     const [muscleId, setMuscleId] = useState("6");
 
@@ -17,7 +18,7 @@ const Form = ({ muscleList }: { muscleList: muscleInterface[] }) => {
 
     return <form className={classes.form}>
         <Select changeHandler={changeHandler} value={muscleId} muscleList={muscleList} />
-        <Link href={`/exercise/${muscleId}`}>Find Exercises</Link>
+        <Link data-cy="form-button" href={`/exercise/${muscleId}`}>Find Exercises</Link>
     </form>
 }
 

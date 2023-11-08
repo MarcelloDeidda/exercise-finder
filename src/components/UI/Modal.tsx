@@ -8,30 +8,36 @@ import classes from "./Modal.module.css";
 
 import { muscleInterface } from "@/lib/interfaces";
 
+// Modal Backdrop component
 const Backdrop = () => {
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const { replace } = useRouter();
 
+    // Remove modal param to close modal
     const handleClick = () => {
         const params = new URLSearchParams(searchParams);
         params.delete("modal");
         replace(`${pathname}?${params.toString()}`)
     }
-    
+
     return <div
+        data-cy="modal-backdrop"
         className={classes.backdrop}
         onClick={handleClick}
     />
 }
 
+// Modal Body component
 const ModalOverlay = ({ muscleList }: { muscleList: muscleInterface[] }) => {
-    return <div className={classes.modal}>
+    return <div data-cy="modal" className={classes.modal}>
         <Form muscleList={muscleList} />
     </div>
 }
 
+// Modal component
 const Modal = ({ muscleList }: { muscleList: muscleInterface[] }) => {
+    // Check current pathname to conditionally render modal
     let searchParams = useSearchParams();
     let params = new URLSearchParams(searchParams);
     let modal = params.get("modal");

@@ -1,3 +1,4 @@
+// Loading component
 const HomeLoad = () => {
     return <p>Loading...</p>
 }

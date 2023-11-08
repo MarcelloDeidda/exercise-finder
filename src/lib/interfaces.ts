@@ -1,3 +1,4 @@
+// Interfaces applied to object lists passed as props to children components
 export interface muscleInterface {
     id: number,
     name: string
