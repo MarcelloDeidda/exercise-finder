@@ -18,7 +18,7 @@ const Form = ({ muscleList }: { muscleList: muscleInterface[] }) => {
 
     return <form className={classes.form}>
         <Select changeHandler={changeHandler} value={muscleId} muscleList={muscleList} />
-        <Link href={`/exercise/${muscleId}`}>Find Exercises</Link>
+        <Link data-cy="form-button" href={`/exercise/${muscleId}`}>Find Exercises</Link>
     </form>
 }
 

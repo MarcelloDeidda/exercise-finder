@@ -1,8 +1,10 @@
 # Exercise Finder
 
+&#10024; Welcome, Fellow Fitness Fantastic! &#10024;
+
 This is a TypeScript and Next.js web application that allows users to retrieve information about physical exercises filtered by muscle groups. It queries an external API to provide exercise details. This README will guide you through the installation, setup, and usage of the app.
 
-This project is deployed and can be tried [here](https://exercise-finder.marcellodeidda.com/)!
+**This project is deployed and can be tried [here](https://exercise-finder.marcellodeidda.com/)!**
 
 - [Exercise Finder](#exercise-finder)
   - [Development](#development)
@@ -22,7 +24,7 @@ The UI was built with React framework Next.js. Server-side-rendering allowed me 
 
 I have styled the interface using CSS modules and Flexbox. The pages are fully responsive and have been tested on Chrome, Firefox, Safari, Edge for compatibility. Performance, SEO and Accessibility have been checked and improved with the help of Lighthouse.
 
-I have deployed the app through Vercel, and is available under my domain: [Exercise Finder](https://exercise-finder.marcellodeidda.com/).
+**I have deployed the app through Vercel, and is available under my domain: [Exercise Finder](https://exercise-finder.marcellodeidda.com/).**
 
 ### More ideas
 

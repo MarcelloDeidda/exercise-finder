@@ -22,6 +22,7 @@ const Backdrop = () => {
     }
 
     return <div
+        data-cy="modal-backdrop"
         className={classes.backdrop}
         onClick={handleClick}
     />
@@ -29,7 +30,7 @@ const Backdrop = () => {
 
 // Modal Body component
 const ModalOverlay = ({ muscleList }: { muscleList: muscleInterface[] }) => {
-    return <div className={classes.modal}>
+    return <div data-cy="modal" className={classes.modal}>
         <Form muscleList={muscleList} />
     </div>
 }
