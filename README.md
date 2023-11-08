@@ -22,7 +22,7 @@ The UI was built with React framework Next.js. Server-side-rendering allowed me 
 
 I have styled the interface using CSS modules and Flexbox. The pages are fully responsive and have been tested on Chrome, Firefox, Safari, Edge for compatibility. Performance, SEO and Accessibility have been checked and improved with the help of Lighthouse.
 
-I have deployed the app through Vercel, and is available under my domain: [Exercise Finder](https://exercise-finder.marcellodeidda.com/)
+I have deployed the app through Vercel, and is available under my domain: [Exercise Finder](https://exercise-finder.marcellodeidda.com/).
 
 ### More ideas
 
@@ -55,7 +55,6 @@ Before you begin, ensure you have met the following requirements:
 
     ```bash
     npm install
-
 
 ## Usage
 
