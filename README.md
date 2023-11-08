@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Exercise Finder
 
-## Getting Started
+This is a TypeScript and Next.js web application that allows users to retrieve information about physical exercises filtered by muscle groups. It queries an external API to provide exercise details. This README will guide you through the installation, setup, and usage of the app.
 
-First, run the development server:
+This project is deployed and can be tried [here](https://exercise-finder.marcellodeidda.com/)!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Exercise Finder](#exercise-finder)
+  - [Development](#development)
+    - [Platform Choice and deployement](#platform-choice-and-deployement)
+    - [More ideas](#more-ideas)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Platform Choice and deployement
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+I have chosen to develop this web application with Typescript to enforce strict data typing, which enhanced code quality and the developer experience.
 
-## Learn More
+The UI was built with React framework Next.js. Server-side-rendering allowed me to create a high-performance, SEO-friendly web application. Most of the components in the page are Server Side Components, apart from Navbar and Form (and children nodes).
 
-To learn more about Next.js, take a look at the following resources:
+I have styled the interface using CSS modules and Flexbox. The pages are fully responsive and have been tested on Chrome, Firefox, Safari, Edge for compatibility. Performance, SEO and Accessibility have been checked and improved with the help of Lighthouse.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I have deployed the app through Vercel, and is available under my domain: [Exercise Finder](https://exercise-finder.marcellodeidda.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### More ideas
 
-## Deploy on Vercel
+The app functionality is quite basic at the moment: it sends a request to an external API to fetch a list of physical exercises filtered by muscle group, and displays them in the UI.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+I think that a good feature to add would be more specific info about each exercise, such as number of reps/sets suggested, some images to show clearly posture during activity, as well as series of different exercises. I would also add a user database and authentication to enable users to save specific exercises, or series of exercises.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+When sending a request to the API I have specified language filter, but the response contains some exercises in Spanish (saved with an English language index). To apply an ulterior filter, I would use a language-detection library. It might also be a good idea giving the user the choice of the language, to expand the user base.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- Node.js and npm installed on your local machine.
+- An internet connection to access the external API.
+
+## Installation
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/MarcelloDeidda/exercise-finder.git
+
+2. Navigate to the project directory:
+   
+   ```bash
+   cd exercise-finder
+
+3. Install project dependencies
+
+    ```bash
+    npm install
+
+
+## Usage
+
+To start the development server and run the application, use the following command:
+
+    ```bash
+    npm run dev
+
+The app will be accessible in your web browser at http://localhost:3000. You can start searching for exercises by muscle group right away.
