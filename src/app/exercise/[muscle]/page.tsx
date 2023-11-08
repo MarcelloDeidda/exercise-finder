@@ -11,14 +11,16 @@ const ExercisePage = async ({
 }: {
     params: { muscle: string }
 }) => {
+    // Get muscle list and main muscle name
     const muscleList: muscleInterface[] = await getMuscleList()
     const { muscle }: { muscle: string } = params;
-    const muscleName = getMuscleName(parseInt(muscle), muscleList);
+    const muscleName: string = getMuscleName(parseInt(muscle), muscleList);
 
+    // Get exercise list and exercise components
     const exercises: exerciseInterface[] = await getExerciseList(parseInt(muscle));
-    const exerciseList = getExerciseCards(parseInt(muscle), muscleList, exercises);
+    const exerciseList: React.ReactNode = getExerciseCards(parseInt(muscle), muscleList, exercises);
 
-    const sortedMuscleList = muscleList
+    const sortedMuscleList: muscleInterface[] = muscleList
         .sort((a: { name: string; }, b: { name: string; }) => a.name.localeCompare(b.name));
 
     return <>

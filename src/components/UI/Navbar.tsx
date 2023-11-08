@@ -5,7 +5,9 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import classes from "./Navbar.module.css";
 
+// Navbar UI component
 const Navbar = () => {
+    // Check current pathname to conditionally render search button
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const { replace } = useRouter();
@@ -14,10 +16,11 @@ const Navbar = () => {
         return pathname === "/";
     }
 
+    // Add param to URL to render Modal
     const handleClick = () => {
         const params = new URLSearchParams(searchParams);
         params.set("modal", "true");
-        replace(`${pathname}?${params.toString()}`)
+        replace(`${pathname}?${params.toString()}`);
     }
 
     return <nav className={classes.navbar}>

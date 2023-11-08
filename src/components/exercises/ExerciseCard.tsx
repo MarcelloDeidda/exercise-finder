@@ -13,6 +13,7 @@ const ExerciseCard = ({
 }) => {
     return <div className={classes["exercise-card"]}>
         <h3>{name}</h3>
+        {/*Parse description prop in case it contains HTML*/}
         <div className={classes["exercise-card__description"]}>{parse(description)}</div>
         {
             trainedMuscles ?

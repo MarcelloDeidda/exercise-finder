@@ -4,6 +4,7 @@ import classes from "./Select.module.css";
 
 import { muscleInterface } from "@/lib/interfaces";
 
+// Select component, will dinamically render an option for each muscle
 const Select = ({
     muscleList,
     value,

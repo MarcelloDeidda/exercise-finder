@@ -8,6 +8,7 @@ import classes from "./Form.module.css";
 
 import { muscleInterface } from "@/lib/interfaces";
 
+// Controlled form component with state passed down to Select component
 const Form = ({ muscleList }: { muscleList: muscleInterface[] }) => {
     const [muscleId, setMuscleId] = useState("6");
 

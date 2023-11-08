@@ -1,6 +1,7 @@
 import Title from "../UI/Title";
 import classes from "./Welcome.module.css";
 
+// Welcome component for Homepage
 const Welcome = () => {
     return <div className={classes.welcome}>
         <Title text="Welcome, Fellow Fitness Fantastic!" />
