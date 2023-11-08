@@ -1,6 +1,7 @@
+import { notFound } from "next/navigation";
+
 import ExerciseCard from "@/components/exercises/ExerciseCard";
 import { exerciseInterface, muscleInterface } from "./interfaces";
-import { notFound } from "next/navigation";
 
 export const getMuscleName = (muscleId: number, muscleList: muscleInterface[]): string => {
     const mainMuscle = muscleList.find(muscleElem => muscleElem.id === muscleId);

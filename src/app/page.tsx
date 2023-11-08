@@ -1,6 +1,7 @@
 import Welcome from '@/components/home/Welcome';
 import Form from '@/components/form/Form';
 import classes from './page.module.css'
+
 import { muscleInterface } from '@/lib/interfaces';
 import { getMuscleList } from '@/lib/fetchers';
 

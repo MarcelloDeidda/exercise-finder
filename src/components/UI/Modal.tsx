@@ -5,6 +5,7 @@ import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
 import Form from "../form/Form";
 import classes from "./Modal.module.css";
+
 import { muscleInterface } from "@/lib/interfaces";
 
 const Backdrop = () => {

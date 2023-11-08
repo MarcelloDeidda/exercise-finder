@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Poppins } from "next/font/google";
 
-import './globals.css'
 import Navbar from '@/components/UI/Navbar'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Exercise Finder',

@@ -5,6 +5,7 @@ import { SetStateAction, useState } from "react";
 
 import Select from "./Select";
 import classes from "./Form.module.css";
+
 import { muscleInterface } from "@/lib/interfaces";
 
 const Form = ({ muscleList }: { muscleList: muscleInterface[] }) => {

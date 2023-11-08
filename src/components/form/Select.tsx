@@ -1,7 +1,8 @@
-import { ChangeEventHandler, SelectHTMLAttributes } from "react";
+import { ChangeEventHandler } from "react";
+
+import classes from "./Select.module.css";
 
 import { muscleInterface } from "@/lib/interfaces";
-import classes from "./Select.module.css";
 
 const Select = ({
     muscleList,
