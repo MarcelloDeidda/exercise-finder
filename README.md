@@ -36,7 +36,7 @@ I think that a good feature to add would be more **specific info** about each ex
 
 When sending a request to the API I have specified language filter, but the response contains some exercises in Spanish (saved with an English language index). To apply an ulterior filter, I would use a **language-detection library**. It might also be a good idea giving the user the choice of the language, to expand the user base.
 
-I would also add more testing, **mocking the API calls** and verifying the exercise list output. Due to restricted time I have hard-coded the muscle list in the test suite, but a better way would be to simulate the API call and make sure the UI matches the given muscle/exercise list.
+I would also add more testing, **mocking the API calls** and verifying the exercise list output. Due to restricted time I have hard-coded the muscle list in the test suite, but a better way would be to simulate the API call and make sure the UI matches the given muscle/exercise list. I would also add unit tests to check the helper and fetcher functions in /src/lib.
 
 ## Prerequisites
 
