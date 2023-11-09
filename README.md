@@ -24,9 +24,9 @@ The UI was built with React framework Next.js. Server-side-rendering allowed me 
 
 I have styled the interface using CSS modules and Flexbox. The pages are fully responsive and have been tested on Chrome, Firefox, Safari, Edge for compatibility. Performance, SEO and Accessibility have been checked and improved with the help of Lighthouse.
 
-I have added a E2E test suite with Cypress. These tests check the elements of the Home and Exercise page, as well as testing the form functionality. These test have been add to a build/test pipeline with GitHub Actions.
+I have added an E2E test suite with Cypress. These tests check the elements of the Home and Exercise pages, as well as testing the form functionality. These tests have been added to a build/test pipeline with GitHub Actions.
 
-**I have deployed the app through Vercel, and is available under my domain: [Exercise Finder](https://exercise-finder.marcellodeidda.com/).**
+**I have deployed the app through Vercel, and it is available under my domain: [Exercise Finder](https://exercise-finder.marcellodeidda.com/).**
 
 ### More ideas
 
@@ -36,7 +36,7 @@ I think that a good feature to add would be more specific info about each exerci
 
 When sending a request to the API I have specified language filter, but the response contains some exercises in Spanish (saved with an English language index). To apply an ulterior filter, I would use a language-detection library. It might also be a good idea giving the user the choice of the language, to expand the user base.
 
-I would also add more testing, mocking the API calls and verifying the exercise list output. Due to restricted time I have hard-coded the muscle list in the test suite, but a better way would be to simulate the API call and make sure the UI matches the given muscle list.
+I would also add more testing, mocking the API calls and verifying the exercise list output. Due to restricted time I have hard-coded the muscle list in the test suite, but a better way would be to simulate the API call and make sure the UI matches the given muscle/exercise list.
 
 ## Prerequisites
 
