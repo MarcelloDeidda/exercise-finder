@@ -17,18 +17,28 @@ jobs:
             - name: Set up Node.js
               uses: actions/setup-node@v2
               with:
-                node-version: 16
+                node-version: 21
             
             - name: Install dependencies
               run: npm install
             
-            - name: Start development server
-              run: npm dev
+            - name: Build Next.js application
+              run: npm run build
+
+            - name: Start your Next.js application
+              run: npm start &
             
+            - name: Wait for the application to be ready
+              run: |
+                timeout=0
+                until curl --silent --fail http://localhost:3000 || ((timeout++ > 60)); do
+                  sleep 5
+                done
+                if [ "$timeout" -gt 60 ]; then
+                  echo "Application did not start within the expected time."
+                  exit 1
+                fi
+    
             - name: Run Cypress tests
-              uses: cypress-io/github-action@v3
-              with:
-                browser: chrome
-                run: npm test
-                wait-on: "http://localhost:3000"
+              run: npm run test
                 
